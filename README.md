@@ -11,11 +11,13 @@
 ### What is this repository?
 This repository contains the code of the new ACM website
 
-
-<style>
+(setq markdown-xhtml-header-content
+"<style type='text/css'>
 .photos {
   display:  flex;
   flex-direction: row;
   margin: 0 auto;
   }
-</style>
+.photos:hover {
+  }
+</style>")
