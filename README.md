@@ -1,4 +1,6 @@
-<img align="center" width="50%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
+<div align="center">
+<img width="50%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
+</div>
 
 # ACM UPV Chapter
 ### What is ACM?
