@@ -1,6 +1,5 @@
-<div align="center" style="display:flex; flex-direction:row;">
-  <img width="40%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
-  <img width="40%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
+<div align="center">
+  <img width="40%" height="auto" src="https://github.com/SrVladyslav/ACM-UPV-Chapter/blob/master/img/logos/logo_maxi.png?raw=true">
 </div>
 
 # ACM UPV Chapter
