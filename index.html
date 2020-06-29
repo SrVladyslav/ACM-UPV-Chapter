@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		ACM UPV Chapter | ACM
+	</title>
+	<!--/////////PAGE DESIGN///////////////-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="ACM UPV Chapter | ACM web page.">
+    <link rel="icon" type="image/ico" href="./img/logos/logo_maxi.png" />
+
+	<!--///////////SCRIPTS/////////////////-->
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!--JQuery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!--Translation-->
+	<script src="./js/lang.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/change_lang.js" type="text/javascript" charset="utf-8"></script>
+
+	<noscript>Your browser does not support JavaScript!</noscript>
+</head>
+
+<body>
+	<!--Preloader-->
+	<div id="preloader" style="display: none;">
+
+	</div>
+
+	<div data-translate="hola">HELLO!</div>
+	<div id="nav-but" onclick="change_lang()" data-translate="nav-ln" class="pointer">ES</div>
+
+
+
+
+
+	<!-- UTIL SCRIPTS -->
+	<script>
+        /** When href used, jumps 80px above of the ID **/
+        window.addEventListener("hashchange", function() {
+            window.scrollTo(window.scrollX, window.scrollY - 80);
+        });
+    </script>
+</body>
+</html>
