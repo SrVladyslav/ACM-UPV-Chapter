@@ -1,5 +1,6 @@
-<div align="center" calss="photos">
-<img width="40%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
+<div align="center" style="display:flex; flex-direction:row;">
+  <img width="40%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
+  <img width="40%" height="auto" src="https://acmupv.webs.upv.es/wp-content/uploads/2017/08/acmupv.png">
 </div>
 
 # ACM UPV Chapter
@@ -10,14 +11,3 @@
 
 ### What is this repository?
 This repository contains the code of the new ACM website
-
-(setq markdown-xhtml-header-content
-"<style type='text/css'>
-.photos {
-  display:  flex;
-  flex-direction: row;
-  margin: 0 auto;
-  }
-.photos:hover {
-  }
-</style>")
