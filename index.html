@@ -4,42 +4,112 @@
 	<title>
 		ACM UPV Chapter | ACM
 	</title>
-	<!--/////////PAGE DESIGN///////////////-->
+	<!--///////////////// PAGE DESIGN /////////////////-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta content="ACM UPV Chapter | ACM web page.">
-    <link rel="icon" type="image/ico" href="./img/logos/logo_maxi.png" />
+    <link rel="icon" type="image/ico" href="./img/logos/logo_maxi.png"/>
 
-	<!--///////////SCRIPTS/////////////////-->
+	<!--///////////////// SCRIPTS /////////////////-->
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<!--Flickity-->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700;800;900&display=swap" rel="stylesheet">
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/navbar_style.css">
+	<link rel="stylesheet" type="text/css" href="./css/carrousel.css">
     <!--Animation-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="./js/bar_animation.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/navbar.js" type="text/javascript" charset="utf-8"></script>
 	<!--JQuery-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<!--Translation-->
 	<script src="./js/lang.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/change_lang.js" type="text/javascript" charset="utf-8"></script>
-
+	<!--UPS!-->
 	<noscript>Your browser does not support JavaScript!</noscript>
 </head>
 
 <body>
 	<!--Preloader-->
-	<div id="preloader" style="display: none;">
+	<div id="preloader""></div>
 
+	<!--Navbar-->
+    <div class="navbar">
+		<!--Desktop Bar-->
+		<div class="nav_logo">
+			<a href="./index.html"><img src="./img/logos/logo_black.png" alt="Logo"></a>
+		</div>
+		<div class="nav_links">
+			<div class="nav_link" data-translate="nav_home">
+				Inicio
+			</div>
+			<div class="nav_link" data-translate="nav_acm_w">
+				ACM-W
+			</div>
+			<div class="nav_link" data-translate="nav_about">
+				Nosotros
+			</div>
+			<div class="nav_link" data-translate="nav_contact">
+				Contacto
+			</div>
+		</div>
+		<div class="nav_flag">
+			<div id="nav-but" onclick="change_lang()" data-translate="nav_ln" class="nav_link pointer">ES</div>
+		</div>
+
+		<!--Burger-->
+		<div class="burger">
+            <div class="lin1"></div>
+            <div class="lin2"></div>
+            <div class="lin3"></div>
+        </div>
 	</div>
 
-	<div data-translate="hola">HELLO!</div>
-	<div id="nav-but" onclick="change_lang()" data-translate="nav-ln" class="pointer">ES</div>
+	<!--Landing Page-->
+	<div class="main-carousel">
+		<div class="carousel-cell">
+			<div class="prov_lp">
+				<img src="./img/logos/logo_maxi.png" alt="LOGO" class="lp_logo">
+			</div>
+		</div>
+		<div class="carousel-cell">
+			<div class="prov_lp">
+				<img src="./img/logos/logo_maxi.png" alt="LOGO" class="lp_logo">
+			</div>
+		</div>
+		<div class="carousel-cell"></div>
+	</div>
 
+	<!-- Description ACM -->
+	<div class="container-fluid row" id="description_acm">
+		<div class="col-md-6">
+			<img src="./img/logos/logo_maxi.png" alt="LOGO" class="desc_logo">
+		</div>
+		<div class="col-md-6">
+			<div class="title">
+				ACM
+			</div>
+			<p>
 
+			</p>
+		</div>
+	</div>
 
-
+	<!-- Footer -->
+	<div class="footer in_column">
+		<div>
+			<img src="./img/logos/logo_maxi.png" alt="LOGO" class="footer_logo">
+		</div>
+		<div>Copyright ©2020 ACM UPV Chapter</div>
+	</div>
 
 	<!-- UTIL SCRIPTS -->
 	<script>
@@ -47,6 +117,9 @@
         window.addEventListener("hashchange", function() {
             window.scrollTo(window.scrollX, window.scrollY - 80);
         });
-    </script>
+	</script>
+	
+	<script src="./js/flickity.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/carrusel.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
