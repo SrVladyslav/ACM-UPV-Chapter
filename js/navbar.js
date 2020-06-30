@@ -26,12 +26,31 @@ const navSlide = () => {
 
 		//Animate links
 		navLinks.forEach((link, index) =>{
+
 			if(link.style.animation){
-				link.style.animation = '';
+                link.style.animation = '';
+                link.style = '';
 			} else {
 				link.style.animation = 'navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s';
-			}
-		});
+                link.style = 'color:black!important';
+            }
+            /*
+            if( $(".nav_link").css('color') == 'black') {
+                $(link).css({
+                    "display":"none",
+                    "color":"white!important"
+                });
+                console.log("UPS1")
+            }else {
+                $(link).css({
+                    "display":"block",
+                    "color":"black!important"
+                });
+                console.log("UPS2")
+            }*/
+        });
+        navbar.classList.toggle('active_main');
+        nav.classList.toggle('active_main');
 		//Burger animation
 		burger.classList.toggle('toggle');
     });

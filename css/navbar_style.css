@@ -32,20 +32,27 @@
 }
 
 .navbar_top .nav_logo img{
-  display: inline;
+  display: flex;
   height: 60px;
   margin-top: 5px;
   width: auto;
   transition-duration: 1.2s;
 }
 
-.navbar_top .nav_links {
+.navbar_top .nav_links {/*
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;*/
 }
 
 .navbar_top .nav_link a{
   color:white;
+  /*font-weight: bold;*/
+  transition-duration: 0.5s;
+  font-size: 18px;
+}
+
+.navbar_top .active_main .nav_link a{
+  color:black;
   /*font-weight: bold;*/
   transition-duration: 0.5s;
   font-size: 18px;
@@ -85,10 +92,10 @@
   margin: 0 auto;
   width: 50%;
   height: 80%;
-  line-height: 25px;
-  flex-direction: row;
+  line-height: 18px;
   cursor: pointer;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center!important;
 }
@@ -101,8 +108,8 @@
   /*border: solid;
   border-color: blue;*/
   border-width: 5px;
-  padding-bottom: 17px;
-  padding-top: 17px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -183,8 +190,12 @@
 .nav_active .nav_links {
   display: block;
   transition-duration: 0.8s;
-  border-radius: 5px;
 }
+
+.active_main {
+  background-color: white!important;
+}
+
 
 @keyframes navLinkFade {
   from {
@@ -215,6 +226,15 @@
     left: 0px;
     padding-right: 0px;
   } 
+  
+  .navbar_top .nav_links {
+    /*display: none*/;
+  }
+
+  .navbar_top .nav_links a, #nav-but {
+    color: black;
+  }
+
 
   .nav_link:hover {
     background-color: rgb(173, 17, 221, 0.1);
