@@ -25,11 +25,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/navbar_style.css">
 	<link rel="stylesheet" type="text/css" href="./css/carrousel.css">
-    <!--Animation-->
+	<!--Animation-->
+	<script src="./js/navbar.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="./js/bar_animation.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./js/navbar.js" type="text/javascript" charset="utf-8"></script>
 	<!--Translation-->
 	<script src="./js/lang.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/change_lang.js" type="text/javascript" charset="utf-8"></script>
@@ -42,11 +42,12 @@
 	<div id="preloader""></div>
 
 	<!--Navbar-->
-    <div class="navbar">
+    <div class="navbar" id="nav">
 		<!--Desktop Bar-->
-		<div class="nav_logo">
+		<div class="nav_logo in_row">
 			<a href="./index.html#home"><img src="./img/logos/logo_black.png" alt="Logo"></a>
 		</div>
+
 		<div class="nav_links">
 			<div class="nav_link">
 				<a href="./index.html#home" data-translate="nav_home">Inicio</a>
@@ -60,17 +61,15 @@
 			<div class="nav_link">
 				<a href="./index.html#description_acm" data-translate="nav_contact">Contacto</a>
 			</div>
-		</div>
-		<div class="nav_flag">
 			<div id="nav-but" onclick="change_lang()" data-translate="nav_ln" class="nav_link pointer">ES</div>
 		</div>
 
 		<!--Burger-->
 		<div class="burger">
-            <div class="lin1"></div>
-            <div class="lin2"></div>
-            <div class="lin3"></div>
-        </div>
+			<div class="lin1"></div>
+			<div class="lin2"></div>
+			<div class="lin3"></div>
+		</div>
 	</div>
 
 	<!--Landing Page-->
@@ -85,7 +84,7 @@
 				<img src="./img/logos/logo_maxi.png" alt="LOGO" class="lp_logo">
 			</div>
 		</div>
-		<div class="carousel-cell row">
+		<div class="carousel-cell row new_3_1">
 			<div class="col-sm-6" style="top:15%;">
 				<img class="new_3" src="https://instagram.fbcn9-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s750x750/82772338_788714971605974_8624664872993694096_n.jpg?_nc_ht=instagram.fbcn9-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=y5Cn2a3VgIYAX8hWRlK&oh=0145c09d4dae8179e1f9d5ebf0dbc32c&oe=5F22E2CA" alt="">
 			</div>
@@ -131,7 +130,7 @@
 	<div class="title space masters-acm" data-translate="dir_title_ACM">
 		Equipo Directivo
 	</div>
-	<div class="container-fluid row space masters-acm" >
+	<div class="container-fluid row space masters-acm center" >
 		<div class="col-md-6 center">	
 			<div class="card_body in_row">
 				<div class="card_photo center">
@@ -190,7 +189,9 @@
         });
 	</script>
 	
+
 	<script src="./js/flickity.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/carrusel.js" type="text/javascript" charset="utf-8"></script>
+	<script> translate();</script>
 </body>
 </html>
