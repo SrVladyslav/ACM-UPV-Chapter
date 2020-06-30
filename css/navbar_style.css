@@ -17,6 +17,12 @@
   box-shadow: 0px 0px 2px 2px rgba(99,99,99,0.5);
 }
 
+.nav_ico {
+  height: 20px;
+  width: auto;
+  margin: 0 auto;
+}
+
 .navbar_top {
   transition-duration: 0.8s;
   background-color: rgb(255,255,255,0.0)!important;
@@ -134,23 +140,6 @@
   cursor: pointer;
 }
 
-
-.nav_links input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
 /**Burguer**/
 .toggle, .burger {
   position: absolute;
@@ -215,7 +204,7 @@
     position: absolute!important;
     width: 100%;
     margin-top: 60px;
-    height: 80%;
+    height: auto;
     display: block;
     position: relative;  
     -webkit-user-select: none;
@@ -227,14 +216,17 @@
     padding-right: 0px;
   } 
   
-  .navbar_top .nav_links {
-    /*display: none*/;
+  .burger div {
+    background-color: black!important;
   }
 
   .navbar_top .nav_links a, #nav-but {
     color: black;
   }
 
+  .navbar_top .nav_links a:hover {
+    color: rgb(173, 17, 221);
+  }
 
   .nav_link:hover {
     background-color: rgb(173, 17, 221, 0.1);
@@ -253,7 +245,6 @@
     display: inline;
     height: 40px;
     width: auto;
-    margin-left: calc(20% + 5px);
     transition-duration: 1.2s;
   }
 }

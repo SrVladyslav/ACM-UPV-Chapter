@@ -93,28 +93,39 @@ body {
     background: -ms-linear-gradient(top, rgba(0,108,158,0.69) 0%, rgba(218,16,241,0.76) 64%, rgba(255,0,255,0.83) 75%, rgba(0,0,0,1) 100%);
     background: linear-gradient(to bottom, rgba(0,108,158,0.69) 0%, rgba(218,16,241,0.76) 64%, rgba(255,0,255,0.83) 75%, rgba(0,0,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006c9e', endColorstr='#000000', GradientType=0 );
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 99%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 99%, 0 95%)!important;
 }
 
 /** Directive group **/
 .masters-acm {
-    width: 80%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
 }
 
 
 .card_body {
+    position: relative;
+    margin: 0px;
     border-radius: 3px;
-    width: 80%;
-    height: 150px;
+    margin-bottom: 25px;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
     background-color: white;
     -webkit-box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.3);
     -moz-box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.3);
     box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.3);
 }
 
+.card_body:hover {
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5);
+    box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5)
+}
+
 .card_photo {
+    position: relative;
     margin: 0 auto;
     height: 100%;
     width: auto;
@@ -122,17 +133,71 @@ body {
 }
 
 .card_photo img {
+    position: relative;
     border-radius: 50%;
-    height: 80%;
-    width: auto;
-    margin-left: 15px!important;
+    width: 110px;
+    height: auto;
+    margin-top: 15px!important;
     margin: auto;
+    z-index: 56;
+}
+
+.card_photo img:hover {
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(161,16,154,1);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(161,16,154,1);
+    box-shadow: 0px 0px 4px 1px rgba(161,16,154,1);
+}
+
+.card_photo::before {
+    content: ' ';
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    margin-top: 15px!important;
+    width: 110px;
+    height: 106px;
+    z-index: 60;
+    border-radius: 50%;
+    display: inline-block;
+    transition-duration: 0.8s;
+}
+
+.card_photo:hover::before {
+    background-color: rgba(0,0,0,0.5);
+    transition-duration: 0.8s;
+}
+
+.card_photo::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 107px;
+    margin-top: 15px!important;
+    background:url("../img/icons/linkedin.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    margin: 0 auto;
+    z-index: 600;
+    top: 30px;
+    left: 30px;
+    opacity: 0;
+}
+
+.card_photo:hover::after { 
+    opacity: 100;
+    transition-duration: 1.5s;
+    cursor: pointer;
 }
 
 .card_text {
-    width: 90%;
+    position: relative;
+    width: 100%;
     height: 100%;
-    line-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /** Footer **/
@@ -158,6 +223,15 @@ body {
 }
 
 
+@media only screen and (max-width: 768px) { }
+
+@media only screen and (max-width: 500px) {
+    .card_body {
+        flex-direction: column;
+        height: 200px;
+        width: 100%;
+    }
+}
 
 
 

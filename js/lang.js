@@ -1,7 +1,7 @@
 var dictionary = {
-    'nav_home': {
-        'es': 'Inicio',
-        'en': 'Home'
+    'nav_events': {
+        'es': 'Eventos',
+        'en': 'Events'
     },
     'nav_about': {
         'es': 'Nosotros',
@@ -14,6 +14,10 @@ var dictionary = {
     'nav_acm_w': {
         'es': 'ACM-W',
         'en': 'ACM-W'
+    },
+    'nav_acm': {
+        'es': 'ACM',
+        'en': 'ACM'
     },
     'nav_contact': {
         'es': 'Contacto',
@@ -30,7 +34,14 @@ var dictionary = {
         gran polo de conocimiento y nexo de unión entre profesionales de \
         las TIC.",
 
-        'en': ' '
+        'en': 'ACM UPV Chapter was born as the chapter of the Association\
+        for Computing Machinery at the Polytechnic University of Valencia.\
+        ACM is the largest association of students, professionals, teachers\
+        and researchers in the field of Informatics and New Technologies, \
+        providing resources such as conferences, training courses, networking,\
+        online library, job opportunities both nationally and internationally\
+        as well as a great pole of knowledge and link of union between \
+        professionals of the ICT.'
     },
     'desc_part_2': {
         'es': "Somos una asociación sin ánimo de lucro centrada en los estudiantes y\
@@ -41,15 +52,19 @@ var dictionary = {
         que pueda ser de interés a nuestros asociados, colaboradores o \
         curiosos", 
 
-        'en': ''
+        'en': 'We are a non-profit association focused on IT students and professionals\
+        to serve as a link between University life, Continuing Education, Business and\
+        Society. For this, talks, round tables, courses and conferences will be\
+        organized to promote a constant source of information that may be of interest to \
+        our associates, collaborators or curious'
     },
     'about_ACM': {
         'es': 'Sobre ACM',
         'en': 'About ACM'
     },
-    '': {
-        'es': ' ',
-        'en': ' '
+    'dir_title_ACM': {
+        'es': 'Equipo Directivo',
+        'en': 'Management Team'
     },
     '': {
         'es': ' ',
