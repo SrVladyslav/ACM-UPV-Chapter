@@ -165,6 +165,7 @@
 
 .burger {
   cursor: pointer;
+  display: none;
 }
 
 .burger div {
@@ -184,6 +185,17 @@
   transition-duration: 0.8s;
 }
 
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 100;
+      transform: translateX(0px);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /** Burguer **/
   .nav_links{
@@ -201,6 +213,10 @@
     padding-left: -5px;
     padding-right: -5px;
   } 
+
+  .burger {
+    display: block;
+  }
 
   .nav_links a{
     margin: 0 auto;
