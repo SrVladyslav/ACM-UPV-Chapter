@@ -57,6 +57,12 @@
   font-size: 18px;
 }
 
+.navbar_top .burger .lin1,
+.navbar_top .burger .lin2,
+.navbar_top .burger .lin3 {
+  background-color: white!important;
+}
+
 .nav_logo {
   margin: 0 auto;
   width: 30%;
@@ -97,6 +103,8 @@
   border-width: 3px;
   padding-bottom: 15px;
   padding-top: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .nav_link:hover {
@@ -135,7 +143,14 @@
   
   -webkit-touch-callout: none;
 }
+
 /**Burguer**/
+.toggle, .burger {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
 .toggle .lin1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -148,18 +163,29 @@
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+.burger {
+  cursor: pointer;
+}
+
 .burger div {
   width: 25px;
   height: 3px;
   background-color: black!important;
   margin: 5px;
   transition: all 0.3s ease;
-  cursor: pointer;
+}
+
+.nav_active, .toggle, .burger{
+  height: 100%!important;
+}
+
+.nav_active .nav_links {
+  display: block;
+  transition-duration: 0.8s;
 }
 
 @media only screen and (max-width: 768px) {
   /** Burguer **/
-
   .nav_links{
     margin: 0 auto;
     position: absolute!important;
@@ -170,10 +196,22 @@
     position: relative;  
     -webkit-user-select: none;
     user-select: none;
+    display: none;
+    transition-duration: 0.8s;
+    padding-left: -5px;
+    padding-right: -5px;
   } 
 
   .nav_links a{
     margin: 0 auto;
-    background-color: white;
+  }
+
+  /** Logo **/
+  .navbar_top .nav_logo img{
+    display: inline;
+    height: 40px;
+    width: auto;
+    margin-left: calc(20% + 5px);
+    transition-duration: 1.2s;
   }
 }

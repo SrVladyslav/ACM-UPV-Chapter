@@ -27,13 +27,13 @@ $(window).scroll(function() {
 
 
 const navSlide = () => {
-	const burger= document.querySelector('.burger');
+    const burger= document.querySelector('.burger');
+    const navbar= document.querySelector('.navbar');
 	const nav = document.querySelector('.nav_links');
 	const navLinks = document.querySelectorAll('.nav_link a');
 	//Toggle nav
 	burger.addEventListener('click', () => {
-		//document.write("hi");
-		nav.classList.toggle('nav_active');
+		navbar.classList.toggle('nav_active');
 
 		//Animate links
 		navLinks.forEach((link, index) =>{
@@ -45,7 +45,14 @@ const navSlide = () => {
 		});
 		//Burger animation
 		burger.classList.toggle('toggle');
-	});
+    });
+    
+    nav.addEventListener('click', ()=> {
+        console.log("Pulsado");
+        navbar.classList.toggle('nav_active');
+        //Burger animation
+		burger.classList.toggle('toggle');
+    });
 	
 }
 
