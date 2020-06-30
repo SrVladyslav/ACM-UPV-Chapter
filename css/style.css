@@ -162,7 +162,7 @@ body {
 }
 
 .card_photo:hover::before {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,1);
     transition-duration: 0.8s;
 }
 
@@ -180,6 +180,7 @@ body {
     top: 30px;
     left: 30px;
     opacity: 0;
+    visibility: inherit;
 }
 
 .card_photo:hover::after { 

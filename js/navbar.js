@@ -6,6 +6,7 @@ $(document).ready(function() {
         $('#nav').removeClass('navbar_top');
     }
 });
+
 $(window).scroll(function() {
     if ($(document).scrollTop() <= 100) {
         $('#nav').addClass('navbar_top');
@@ -55,7 +56,7 @@ const navSlide = () => {
 		burger.classList.toggle('toggle');
     });
     
-
+    /* Closes the search bar when you click
     nav.addEventListener('click', ()=> {
         if($(".burger").hasClass("nav_active")) {
             console.log("Pulsado");
@@ -64,6 +65,7 @@ const navSlide = () => {
             burger.classList.toggle('toggle');
         }
     });
+    */
 	
 }
 
