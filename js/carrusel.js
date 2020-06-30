@@ -3,7 +3,8 @@ $('.main-carousel').flickity({
     cellAlign: 'center',
     contain: true,
     dragable: true,
-    freeScroll: true,
     pageDots: false,
-    autoPlay: 2500
+    autoPlay: 2500,
+    pauseAutoPlayOnHover: true,
+    wrapAround: true
 });

@@ -3,6 +3,7 @@ body {
     background: #F8F9FA;
     text-align: center;
     font-family: 'IBM Plex Mono', monospace;
+    color: black;
 }
 
 .font_museo_moderno {
@@ -22,6 +23,16 @@ body {
 .in_column {
     display: flex;
     flex-direction: column;
+}
+
+.center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.space {
+    margin-top: 3em!important;
 }
 
 /** Landing Page **/
@@ -49,12 +60,18 @@ body {
     margin: 0 auto;
     margin-top: 3em;
     width: 90%;
-    height: 150vh;
+    height: 100%;
 }
 
-.desc_logo {
+.desc_logo{
     width: 80%;
     height: auto;
+}
+
+.desc_text {
+    font-size: 0.8em;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .title {
@@ -78,9 +95,43 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
 }
 
-.prov_div {
-    height: 200vh;
-    width: 100%;
+/** Directive group **/
+.masters-acm {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+.card_body {
+    border-radius: 8px;
+    width: 80%;
+    height: 150px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5);
+    box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5);
+}
+
+.card_photo {
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    background-color: rgba(0,0,0,0);
+}
+
+.card_photo img {
+    border-radius: 50%;
+    height: 80%;
+    width: auto;
+    margin-left: 15px!important;
+    margin: auto;
+}
+
+.card_text {
+    width: 90%;
+    height: 100%;
+    line-height: 100%;
 }
 
 /** Footer **/
@@ -109,7 +160,13 @@ body {
 
 
 
-
+/** NEWS **/
+.new_3 {
+    clip-path: polygon(50% 0%, 100% 38%, 89% 88%, 35% 100%, 0 57%);
+    width: 70%;
+    height: auto;
+    top: 5em;
+}
 
 
 

@@ -12,6 +12,8 @@
     <link rel="icon" type="image/ico" href="./img/logos/logo_maxi.png"/>
 
 	<!--///////////////// SCRIPTS /////////////////-->
+	<!--JQuery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -28,8 +30,6 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="./js/bar_animation.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/navbar.js" type="text/javascript" charset="utf-8"></script>
-	<!--JQuery-->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<!--Translation-->
 	<script src="./js/lang.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/change_lang.js" type="text/javascript" charset="utf-8"></script>
@@ -45,20 +45,20 @@
     <div class="navbar">
 		<!--Desktop Bar-->
 		<div class="nav_logo">
-			<a href="./index.html"><img src="./img/logos/logo_black.png" alt="Logo"></a>
+			<a href="./index.html#home"><img src="./img/logos/logo_black.png" alt="Logo"></a>
 		</div>
 		<div class="nav_links">
-			<div class="nav_link" data-translate="nav_home">
-				Inicio
+			<div class="nav_link">
+				<a href="./index.html#home" data-translate="nav_home">Inicio</a>
 			</div>
-			<div class="nav_link" data-translate="nav_acm_w">
-				ACM-W
+			<div class="nav_link">
+				<a href="./index.html#description_acm" data-translate="nav_acm_w">ACM-W</a>
 			</div>
-			<div class="nav_link" data-translate="nav_about">
-				Nosotros
+			<div class="nav_link">
+				<a href="./index.html#description_acm" data-translate="nav_about">Nosotros</a>
 			</div>
-			<div class="nav_link" data-translate="nav_contact">
-				Contacto
+			<div class="nav_link">
+				<a href="./index.html#description_acm" data-translate="nav_contact">Contacto</a>
 			</div>
 		</div>
 		<div class="nav_flag">
@@ -74,7 +74,7 @@
 	</div>
 
 	<!--Landing Page-->
-	<div class="main-carousel">
+	<div class="main-carousel" id="home">
 		<div class="carousel-cell">
 			<div class="prov_lp">
 				<img src="./img/logos/logo_maxi.png" alt="LOGO" class="lp_logo">
@@ -85,7 +85,14 @@
 				<img src="./img/logos/logo_maxi.png" alt="LOGO" class="lp_logo">
 			</div>
 		</div>
-		<div class="carousel-cell"></div>
+		<div class="carousel-cell row">
+			<div class="col-sm-6" style="top:15%;">
+				<img class="new_3" src="https://instagram.fbcn9-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s750x750/82772338_788714971605974_8624664872993694096_n.jpg?_nc_ht=instagram.fbcn9-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=y5Cn2a3VgIYAX8hWRlK&oh=0145c09d4dae8179e1f9d5ebf0dbc32c&oe=5F22E2CA" alt="">
+			</div>
+			<div class="col-sm-6" style="top:50%;left: 0;">
+				<h3>Participaste en nuestro pasado <br>Google Hash Code?</h3>
+			</div>
+		</div>
 	</div>
 
 	<!-- Description ACM -->
@@ -93,15 +100,79 @@
 		<div class="col-md-6">
 			<img src="./img/logos/logo_maxi.png" alt="LOGO" class="desc_logo">
 		</div>
-		<div class="col-md-6">
-			<div class="title">
-				ACM
+		<div class="col-md-6 center in_column">
+			<div class="title" data-translate="about_ACM">
+				Sobre ACM
 			</div>
-			<p>
+			<p class="desc_text" data-translate="desc_part_1">
+				ACM UPV Chapter nace como el capítulo de la Association for 
+				Computing Machinery en la Universidad Politécnica de Valencia. 
+				ACM es la mayor asociación de estudiantes, profesionales, docentes 
+				e investigadores en el ámbito de la Informática y las Nuevas 
+				Tecnologías proporcionando recursos tales como conferencias, 
+				cursos de formación, networking, biblioteca online, oportunidades 
+				laborales tanto a nivel nacional como internacional así como un 
+				gran polo de conocimiento y nexo de unión entre profesionales de 
+				las TIC.
+			</p>
 
+			<p class="desc_text" data-translate="desc_part_2">
+				Somos una asociación sin ánimo de lucro centrada en los estudiantes y 
+				profesionales de la Informática para servir de nexo de unión entre 
+				la vida Universitaria, la Formación Permanente, la Empresa y la Sociedad.
+				Para ello se organizarán charlas, mesas redondas, debates, cursos y 
+				jornadas destinadas a favorecer una constante fuente de información 
+				que pueda ser de interés a nuestros asociados, colaboradores o curiosos.
 			</p>
 		</div>
 	</div>
+
+	<!-- Equipo Directivo -->
+	<div class="title space masters-acm" data-translate="dir_title_ACM">
+		Equipo Directivo
+	</div>
+	<div class="container-fluid row space masters-acm" >
+		<div class="col-md-6 center">	
+			<div class="card_body in_row">
+				<div class="card_photo center">
+					<img src="./img/people/jorge_fernandez_alonso.png" alt="Jorge">
+				</div>
+				<div class="card_text center">
+					<p class="center">
+						<b>Jorge Fernández Alfonso</b>Presidente
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">	
+			<div class="card_body">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid row space masters-acm" >
+		<div class="col-md-6 center">	
+			<div class="card_body in_row">
+				<div class="card_photo center">
+					<img src="./img/people/jorge_fernandez_alonso.png" alt="Jorge">
+				</div>
+				<div class="card_text">
+					<b>Jorge Fernández Alfonso</b>Presidente
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">	
+			<div class="card_body">
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="space"></div>
 
 	<!-- Footer -->
 	<div class="footer in_column">

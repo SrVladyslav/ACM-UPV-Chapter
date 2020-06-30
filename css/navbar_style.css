@@ -47,8 +47,25 @@
   margin: 0 auto;
   text-decoration: none;
   font-size: 15px;
-  border: solid;
-  border-color: blue;
+  transition-duration: 0.2s;
+  /*border: solid;
+  border-color: blue;*/
+}
+
+.nav_link:hover {
+  border-bottom: 2px solid rgb(173, 17, 221);
+  transition-duration: 0.2s;
+}
+
+.nav_link a {
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+.nav_link a:hover {
+  color: rgb(173, 17, 221);
+  transition-duration: 0.5s;
 }
 
 .nav_flag {
