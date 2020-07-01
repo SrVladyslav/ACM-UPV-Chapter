@@ -64,7 +64,7 @@ var dictionary = {
     },
     'dir_title_ACM': {
         'es': 'Equipo Directivo',
-        'en': 'Management Team'
+        'en': 'Leadership Team'
     },
     // People cards
     'toni': {
