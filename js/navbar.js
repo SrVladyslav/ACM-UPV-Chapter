@@ -1,6 +1,6 @@
 //DETECTS THE POSITION ON THE SCREEN
 $(document).ready(function() {
-    if ($(document).scrollTop() <= 100) {
+    if ($(document).scrollTop() <= 250) {
         $('#nav').addClass('navbar_top');
     } else {
         $('#nav').removeClass('navbar_top');
@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function() {
-    if ($(document).scrollTop() <= 100) {
+    if ($(document).scrollTop() <= 250) {
         $('#nav').addClass('navbar_top');
     } else {
         $('#nav').removeClass('navbar_top');

@@ -66,6 +66,39 @@ var dictionary = {
         'es': 'Equipo Directivo',
         'en': 'Management Team'
     },
+    // People cards
+    'toni': {
+        'es': '<b>Antoni Mestre Gascón:</b> Vicepresidente',
+        'en': '<b>Antoni Mestre Gascón:</b> Vice President'
+    },
+    'asier': {
+        'es': '<b>Asier Serrano Aramburu:</b> Tesorero',
+        'en': '<b>Asier Serrano Aramburu:</b> Treasurer'
+    },
+    'jorge': {
+        'es': '<b>Jorge Fernández Alfonso:</b> Presidente',
+        'en': '<b>Jorge Fernández Alfonso:</b> President'
+    },
+    'alejandro': {
+        'es': '<b>Alejandro Iznardo Ruiz:</b> Secretario',
+        'en': '<b>Alejandro Iznardo Ruiz:</b> Secretary'
+    },
+    '': {
+        'es': ' ',
+        'en': ' '
+    },
+    '': {
+        'es': ' ',
+        'en': ' '
+    },
+    '': {
+        'es': ' ',
+        'en': ' '
+    },
+    '': {
+        'es': ' ',
+        'en': ' '
+    },
     '': {
         'es': ' ',
         'en': ' '
