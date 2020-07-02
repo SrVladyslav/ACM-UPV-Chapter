@@ -112,9 +112,9 @@ body {
     position: relative;
     margin: 0px;
     border-radius: 3px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     flex-direction: column;
-    height: 200px;
+    height: 300px;
     width: 100%;
     /*
     background-color: white;
@@ -135,7 +135,7 @@ body {
 .card_photo {
     position: relative;
     margin: 0 auto;
-    height: 100%;
+    height: 200px;
     width: auto;
     background-color: rgba(0,0,0,0);
 }
@@ -143,17 +143,17 @@ body {
 .card_photo img {
     position: relative;
     border-radius: 50%;
-    width: 110px;
-    height: auto;
+    width: 160px;/**110px**/
+    height: 160px;
+    margin: 0 auto;
     margin-top: 15px!important;
-    margin: auto;
     z-index: 56;
 }
 
 .card_photo img:hover {
-    -webkit-box-shadow: 0px 0px 4px 1px rgba(161,16,154,1);
-    -moz-box-shadow: 0px 0px 4px 1px rgba(161,16,154,1);
-    box-shadow: 0px 0px 4px 1px rgba(161,16,154,1);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(161,16,154,2);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(161,16,154,2);
+    box-shadow: 0px 0px 4px 1px rgba(161,16,154,2);
 }
 
 .card_photo::before {
@@ -161,8 +161,8 @@ body {
     position: absolute;
     background-color: rgba(0,0,0,0);
     margin-top: 15px!important;
-    width: 110px;
-    height: 106px;
+    width: 160px;
+    height: 160px;
     z-index: 60;
     border-radius: 50%;
     display: inline-block;
@@ -170,23 +170,23 @@ body {
 }
 
 .card_photo:hover::before {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.5);
     transition-duration: 0.8s;
 }
 
 .card_photo::after {
     content: "";
     position: absolute;
-    width: 110px;
-    height: 107px;
+    width: 160px;
+    height: 160px;
     margin-top: 15px!important;
     background:url("../img/icons/linkedin.png");
     background-repeat: no-repeat;
-    background-size: 50px 50px;
+    background-size: 46px 46px;
     margin: 0 auto;
     z-index: 600;
-    top: 30px;
-    left: 30px;
+    top: 57px;
+    left: 57px;
     opacity: 0;
     visibility: inherit;
 }
@@ -200,13 +200,18 @@ body {
 .card_text {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 40px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 5px;
     margin-left: 5px;
+}
+
+.card_name {
+    font-weight: bold;
+    margin: 0 auto;
 }
 
 /** Contact **/
@@ -278,6 +283,10 @@ body {
 @media only screen and (max-width: 768px) {
     .contact div{
         margin-top: 3em;
+    }
+
+    .card_body {
+        margin-bottom: 35px;
     }
 }
 
