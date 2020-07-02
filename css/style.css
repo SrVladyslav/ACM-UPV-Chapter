@@ -228,6 +228,12 @@ body {
     box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.5);
 }
 
+
+.twitter_timeline {
+    display: block;
+}
+
+
 /** Footer **/
 .footer {
     color: black;
@@ -288,6 +294,15 @@ body {
 
     .card_body {
         margin-bottom: 35px;
+    }
+
+    .card_photo {
+        height: 100%;
+        width: auto;
+    }
+
+    .twitter_timeline {
+        display: none;
     }
 }
 
