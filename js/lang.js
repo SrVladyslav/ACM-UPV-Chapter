@@ -4,8 +4,8 @@ var dictionary = {
         'en': 'Events'
     },
     'nav_about': {
-        'es': 'Nosotros',
-        'en': 'About'
+        'es': 'Equipo',
+        'en': 'Team'
     },
     'nav_ln': {
         'es': 'EN',

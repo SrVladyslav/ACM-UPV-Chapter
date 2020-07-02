@@ -136,7 +136,7 @@ body {
 .card_photo {
     position: relative;
     margin: 0 auto;
-    height: 200px;
+    height: 170px;
     width: auto;
     background-color: rgba(0,0,0,0);
 }
@@ -144,8 +144,8 @@ body {
 .card_photo img {
     position: relative;
     border-radius: 50%;
-    width: 160px;/**110px**/
-    height: 160px;
+    width: 140px;/**110px**/
+    height: 140px;
     margin: 0 auto;
     margin-top: 15px!important;
     z-index: 56;
@@ -162,8 +162,8 @@ body {
     position: absolute;
     background-color: rgba(0,0,0,0);
     margin-top: 15px!important;
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     z-index: 60;
     border-radius: 50%;
     display: inline-block;
@@ -178,16 +178,16 @@ body {
 .card_photo::after {
     content: "";
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     margin-top: 15px!important;
     background:url("../img/icons/linkedin.png");
     background-repeat: no-repeat;
     background-size: 46px 46px;
     margin: 0 auto;
     z-index: 600;
-    top: 57px;
-    left: 57px;
+    top: 47px;
+    left: 47px;
     opacity: 0;
     visibility: inherit;
 }
@@ -294,7 +294,7 @@ body {
 @media only screen and (max-width: 500px) {
     .card_body {
         flex-direction: column;
-        height: 200px;
+        height: 250px;
         width: 100%;
     }
 }
