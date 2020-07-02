@@ -4,6 +4,7 @@ body {
     text-align: center;
     font-family: 'IBM Plex Mono', monospace;
     color: black;
+    position: absolute;
 }
 
 .font_museo_moderno {
