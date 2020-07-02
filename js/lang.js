@@ -67,21 +67,21 @@ var dictionary = {
         'en': 'Leadership Team'
     },
     // People cards
-    'toni': {
-        'es': '<b>Antoni Mestre Gascón:</b> Vicepresidente',
-        'en': '<b>Antoni Mestre Gascón:</b> Vice President'
+    'vice': {
+        'es': 'Vicepresidente',
+        'en': 'Vice President'
     },
-    'asier': {
-        'es': '<b>Asier Serrano Aramburu:</b> Tesorero',
-        'en': '<b>Asier Serrano Aramburu:</b> Treasurer'
+    'treasurer': {
+        'es': 'Tesorero',
+        'en': 'Treasurer'
     },
-    'jorge': {
-        'es': '<b>Jorge Fernández Alfonso:</b> Presidente',
-        'en': '<b>Jorge Fernández Alfonso:</b> President'
+    'president': {
+        'es': 'Presidente',
+        'en': 'President'
     },
-    'alejandro': {
-        'es': '<b>Alejandro Iznardo Ruiz:</b> Secretario',
-        'en': '<b>Alejandro Iznardo Ruiz:</b> Secretary'
+    'secretary': {
+        'es': 'Secretario',
+        'en': 'Secretary'
     },
     '': {
         'es': ' ',
