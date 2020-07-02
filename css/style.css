@@ -302,7 +302,7 @@ body {
     }
 
     .twitter_timeline {
-        display: none;
+        display: none!important;
     }
 }
 
