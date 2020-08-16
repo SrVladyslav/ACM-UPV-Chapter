@@ -1,5 +1,18 @@
 <div class="container p-4">
     <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <h5><b>Published posts:</b> {{count}} </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         {{#each posts}}
             <div class="col-md-12">
                 <div class="card text-center">
@@ -7,8 +20,8 @@
                         <p class="m-2">
                             <img src="{{image_url}}" alt="Image" width="400" height="200">
                         </p>
-                        <h3 class="m-2 card_title">
-                            [{{post_type}}] {{title}}
+                        <h3 class="m-2 card_title in_row">
+                            <div class="gray">[{{post_type}}]</div> {{title}}
                         </h3>
                         <hr>
                         <p class="m-2 card_body">
@@ -41,7 +54,7 @@
     // Delete post Script
     function sure_about(id) {
         if(confirm("Do you really want to delete this post?")){
-            window.location.href = "/posts/delete/" + id
+            window.location.href = "/posts/to_delete/" + id
         }
     }
 </script>

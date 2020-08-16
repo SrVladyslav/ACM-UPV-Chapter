@@ -3,7 +3,7 @@ const path = require('path')
 
 const router = express.Router()
 const pool = require('../database')
-const { isLoggedIn } = require('../lib/auth')
+const { isLoggedIn , isAuthenticatedCollaborator , isAuthenticatedAdmin} = require('../lib/auth')
 const fs = require('fs')
 
 var multer = require('multer')
@@ -12,9 +12,9 @@ const expressFileUpload = require('express-fileupload')
 
 
 // POST Routes
-router.get('/add', isLoggedIn, (req, res) => {
+/*router.get('/add', isLoggedIn, (req, res) => {
     res.render('posts/add')
-})
+})*/
 
 router.use(expressFileUpload({
     createParentPath: true,
@@ -24,6 +24,7 @@ router.use(expressFileUpload({
 }))
 
 // Form receiver 
+/*
 router.post("/add", isLoggedIn, async (req, res, next) => {
     const { title, body } = req.body
     console.log(req.files)
@@ -59,57 +60,31 @@ router.post("/add", isLoggedIn, async (req, res, next) => {
         res.redirect('/posts/add')
     }
 })
+*/
 
 // SHOW POSTS
-router.get('/', isLoggedIn, async (req, res) => {
+router.get('/', isAuthenticatedAdmin, async (req, res) => {
     //var url = this.window.URL || this.window.webkitURL;
     //var url = 'http://localhost:3000/upload/'
-    const posts = await pool.query('SELECT * FROM posts')
+    const posts = await pool.query('SELECT * FROM posts WHERE (deleted = "1" AND proposed = "1") ORDER BY id DESC')
     for(let i = 0; i < posts.length; i++){
         const user = await pool.query('SELECT * FROM users WHERE id = ?', [posts[i].user_id]) 
         posts[i].by = user[0].username
-
-        //posts[i].image_url = url.createObjectURL(posts[i].image);
     }
-    res.render('posts/post_list', {posts: posts})
+    var count = posts.length
+    res.render('posts/post_list', {posts: posts, count:count})
 })
 
-// DELETE POST
-router.get('/delete/:id', isLoggedIn, async (req, res) => {
-    const { id } = req.params
 
-    
-    await pool.query('DELETE FROM posts WHERE ID = ?', [id])
-    req.flash('success', 'Post was deleted successfully!')
-    res.redirect('/posts')
-})
-// EDIT post
-router.get('/edit/:id', isLoggedIn, async (req, res) => {
-    const { id } = req.params
-    const posts = await pool.query('SELECT * FROM posts WHERE id = ?', [id])
-    res.render('posts/edit', {posts: posts[0]})
-})
-
-// UPDATE post
-router.post('/edit/:id', isLoggedIn, async (req, res) => {
-    const { id } = req.params
-    //New data
-    const { title, body } = req.body
-    const newPost = {
-        title, 
-        body
+router.get('/deleted', isAuthenticatedAdmin, async (req, res) => {
+    const posts = await pool.query('SELECT * FROM posts WHERE (deleted = "0") ORDER BY id DESC')
+    for(let i = 0; i < posts.length; i++){
+        const user = await pool.query('SELECT * FROM users WHERE id = ?', [posts[i].user_id]) 
+        posts[i].by = user[0].username
     }
-
-    await pool.query('UPDATE posts SET ? WHERE id = ?', [newPost, id])
-    req.flash('success', 'Post was edited successfully!')
-    res.redirect('/posts')
+    var count = posts.length
+    res.render('posts/deleted_post_list', {posts: posts, count: count})
 })
 
-/* posting image
-router.post('/img', isLoggedIn, async (req, res, next) => {
-    console.log(req.files.target_file)
-    IMAGE_URL = 'uploads/' + req.files.target_file.name
-    res.send(IMAGE_URL)
-})*/
 
 module.exports = router

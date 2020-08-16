@@ -6,14 +6,29 @@
                     <h3>Edit Profile</h3>
                 </div>
                 <div class="card-body">
-                    <form action="/profile/edit/{{user.id}}" method="POST">
+                    <form action="/profile/edit/{{user.id}}" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" value="{{user.email}}" class="form-control" name="email" autofocus>
+                            <center><img src="{{user.image_url}}" alt="IMG" class="profile_img"></center>
                         </div>
                         <div class="form-group">
+                            <label for="name">Name</label>
                             <input type="text" placeholder="Name" value="{{user.name}}" class="form-control" name="name">
                         </div>
                         <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea type="body" placeholder="Description" rows="3" class="form-control" name="description">{{user.description}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">User photo </label>
+                            <input type="file" name="tg_file">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" placeholder="Email" value="{{user.email}}" class="form-control" name="email" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
                             <input type="password" placeholder="Password" class="form-control" name="password">
                         </div>
                         <div class="form-group">

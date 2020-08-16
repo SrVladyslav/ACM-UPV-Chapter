@@ -56,6 +56,12 @@ body, .body {
 .profile_img {
     width: 200px;
     height: 200px;
+    border-radius: 50%!important;
+}
+
+.spider_web {
+    width: 200px;
+    height: auto;
 }
 
 .card_title {
@@ -73,3 +79,20 @@ body, .body {
     font-size: 0.7em;
 }
 
+.material-icons.blue { color: #a400aa; }
+
+.gray {
+    color: #797979;
+    font-size: 0.6em;
+    margin: 5px;
+}
+
+.in_row {
+    display: flex;
+    flex-direction: row!important;
+    justify-content: center;
+}
+
+.usr {
+    color: gray;
+}

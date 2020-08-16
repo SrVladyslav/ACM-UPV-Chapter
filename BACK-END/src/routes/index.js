@@ -5,7 +5,7 @@ const { isLoggedIn } = require('../lib/auth')
 
 // Main route
 router.get('/', isLoggedIn, async (req, res) => {
-    const posts = await pool.query('SELECT * FROM posts')
+    const posts = await pool.query('SELECT * FROM posts WHERE (deleted = "1" AND proposed = "1") ORDER BY id DESC')
 
     for(let i = 0; i < posts.length; i++){
         const user = await pool.query('SELECT * FROM users WHERE id = ?', [posts[i].user_id]) 
@@ -16,7 +16,7 @@ router.get('/', isLoggedIn, async (req, res) => {
 
 // API REST FOR POSTS
 router.get('/posts/get', async (req, res) => {
-    const posts = await pool.query('SELECT * FROM posts WHERE post_type = ?', ['POST'])
+    const posts = await pool.query('SELECT * FROM posts WHERE (post_type = ? AND deleted = "1" AND proposed = "1") ORDER BY id DESC', ['POST'])
 
     for(let i = 0; i < posts.length; i++){
         const user = await pool.query('SELECT * FROM users WHERE id = ?', [posts[i].user_id]) 
@@ -26,7 +26,7 @@ router.get('/posts/get', async (req, res) => {
 })
 
 router.get('/events/get', async (req, res) => {
-    const posts = await pool.query('SELECT * FROM posts WHERE post_type = ?', ['EVENT'])
+    const posts = await pool.query('SELECT * FROM posts WHERE (post_type = ? AND deleted = "1" AND proposed = "1") ORDER BY id DESC', ['EVENT'])
 
     for(let i = 0; i < posts.length; i++){
         const user = await pool.query('SELECT * FROM users WHERE id = ?', [posts[i].user_id]) 

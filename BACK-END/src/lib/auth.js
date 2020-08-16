@@ -17,15 +17,20 @@ module.exports = {
     },
 
     // Permit to use only admin methods
-    isNotAdmin(req, res, next) {
-        if (req.user.username == 'vlady') {
-            console.log("Es dios")
+    isAuthenticatedAdmin(req, res, next) {
+        if (req.isAuthenticated() && req.user.role == 'Administrator') {
             return next()
         }else {
-            console.log('UPS')
+            return res.redirect('/profile')
+        }
+    },
+
+    // Permit to use only admin methods
+    isAuthenticatedCollaborator(req, res, next) {
+        if (req.isAuthenticated() && (req.user.role == 'Administrator' || req.user.role == 'Collaborator')) {
+            return next()
+        }else {
             return res.redirect('/profile')
         }
     }
-
-    // 
 }

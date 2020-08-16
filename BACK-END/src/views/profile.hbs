@@ -3,13 +3,22 @@
         <div class="col-md-12 mx-auto">
             <div class="card text-center">
                 <div class="card-body">
-                    <img src="{{user.image_url}}" alt="Logo" class="card-img-top mx-auto m-2 rounded-circle profile_img">
-                    <h5>Name: {{user.name}} </h5>
-                    <h5>Username: {{user.username}}</h5>
-                    <h5>Email: {{user.email}}</h5>
-                    <h5>Role: {{user.role}}</h5>
-                    <hr>
-                    <a href="/create_post" class="btn btn-primary m-2">Add post</a>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 mx-auto">
+                            <img src="{{user.image_url}}" alt="Logo" class="card-img-top m-2 rounded-circle profile_img">
+                        </div>
+                        <div class="col-md-6 col-sm-12 mx-auto text-left">
+                            <h5><b>Name:</b> {{user.name}} </h5>
+                            <h5><b>Description:</b> {{user.description}} </h5>
+                            <hr>
+                            <h5><b>Username:</b> {{user.username}} </h5>
+                            <h5><b>Email:</b> {{user.email}} </h5>
+                            <h5><b>Role:</b> {{user.role}} </h5>
+                        </div>
+                    </div>
+                    {{#profile_post user.role}}
+                        <a href="/create_post" class="btn btn-primary m-2">Add post</a>
+                    {{/profile_post}}
                     <a href="/profile/edit/{{user.id}}" class="btn btn-secondary">Edit Profile</a>
                 </div>
             </div>
@@ -31,19 +40,23 @@
                         <p class="m-2">
                             <img src="{{image_url}}" alt="Image" width="400" height="200">
                         </p>
-                        <h4 class="m-2 card_title">
-                            {{title}}
-                        </h4>
+                        <h3 class="m-2 card_title in_row">
+                            <div class="gray">[{{post_type}}]</div> {{title}}
+                        </h3>
                         <hr>
                         <p class="m-2 card_body">
                             {{body}}
                         </p>
                         <hr>
                         <p class="m-3 card_publi">
-                            Posted: {{timeago published}}
+                            Posted {{timeago published}} {{#state proposed}} {{/state}}
                         </p>
                         <a href="/posts/edit/{{id}}" class="btn btn-secondary">Edit</a>
-                        <a href="/posts/delete/{{id}}" class="btn btn-danger">Delete</a>
+                        {{#restrict_delete proposed_by}}
+                            <div onclick="sure_about({{id}})" class="btn btn-danger">
+                                Delete
+                            </div>
+                        {{/restrict_delete}}
                     </div>
                 </div>
             </div>
@@ -56,3 +69,19 @@
         {{/each}}
     </div>
 </div>
+
+<script>
+    // Delete post Script
+    function sure_about(id) {
+        if(confirm("Do you really want to delete this post?")){
+            window.location.href = "/posts/to_delete/" + id
+        }
+    }
+
+    // Delete proposed post
+    function sure_about_propose(id) {
+        if(confirm("Do you really want to delete this post?")){
+            window.location.href = "/posts/delete/" + id
+        }
+    }
+</script>
