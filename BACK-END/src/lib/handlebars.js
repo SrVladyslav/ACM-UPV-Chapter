@@ -30,6 +30,7 @@ helpers.is_admin = (user) => {
                     <a class="nav-link" href="/signup">Add New Profile</a>
                     <a class="nav-link" href="/posts/proposed">Proposed Posts</a>
                     <a class="nav-link" href="/posts/deleted">Deleted Posts</a>
+                    <a class="nav-link" href="/active_users">Active Users</a>                   
                 </div>
             </li>
             `
@@ -85,4 +86,19 @@ helpers.profile_post = (role) => {
         ` 
     }
 }
+
+// Role text color
+helpers.role_color = (role) => {
+    if(role == "Administrator") {
+        return `
+            profile_img_admin
+        `
+    }else if(role == "Collaborator"){
+        return `
+            profile_img_collaborator
+        ` 
+    }
+}
+
+
 module.exports = helpers

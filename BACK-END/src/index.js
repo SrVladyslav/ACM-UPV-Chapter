@@ -356,8 +356,11 @@ app.post('/profile/edit/:id', isLoggedIn, async (req, res) => {
     }*/
 })
 
-
-
+// Users and Admins
+app.get('/active_users', isAuthenticatedAdmin, async (req, res) => {
+    const users = await pool.query('SELECT * FROM users WHERE NOT id = ?', [req.user.id])
+    res.render('./admin_list', {users: users})
+})
 
 // Starting the server
 app.listen(app.get('port'), () => {

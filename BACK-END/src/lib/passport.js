@@ -43,7 +43,7 @@ passport.use('local.signup', new LocalStrategy({
         email
     }
     // CHECK FOR USER
-    const rows = await db.query('SELECT * FROM users WHERE email = ?', [email])
+    const rows = await db.query('SELECT * FROM users WHERE username = ?', [username])
     if(rows.length <= 0) {
         newUser.password = await helpers.encryptPassword(password) // Encrypt the pwd
 
@@ -51,7 +51,7 @@ passport.use('local.signup', new LocalStrategy({
         newUser.id = result.insertId
         return done(null, newUser)
     }else {
-        return done(null, false, req.flash('message', 'This email is in use...'))
+        return done(null, false, req.flash('message', 'This username is already in use...'))
     }
 }))
 

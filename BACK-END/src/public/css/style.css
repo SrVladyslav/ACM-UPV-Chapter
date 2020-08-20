@@ -59,6 +59,20 @@ body, .body {
     border-radius: 50%!important;
 }
 
+.profile_img_admin {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(138,0,138,0.6);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(138,0,138,0.6);
+    box-shadow: 0px 0px 20px 5px rgba(138,0,138,0.6);
+    border-radius: 50%;
+}
+
+.profile_img_collaborator {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 110, 184, 0.6);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0, 110, 184, 0.6);
+    box-shadow: 0px 0px 20px 5px rgba(0, 110, 184, 0.6);
+    border-radius: 50%;
+}
+
 .spider_web {
     width: 200px;
     height: auto;
@@ -96,3 +110,4 @@ body, .body {
 .usr {
     color: gray;
 }
+
