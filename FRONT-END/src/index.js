@@ -1,6 +1,7 @@
 // Nav menu toggle
 
 var nav = document.getElementById("nav");
+var formLink = document.getElementById("formLink");
 var navmenutoggle = document.getElementById("navmenu");
 var menuoverlay = document.getElementById("menuoverlay");
 var menuoverlayclose = document.getElementById("menuoverlayclose");
