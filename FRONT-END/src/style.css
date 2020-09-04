@@ -8,6 +8,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, p {
@@ -25,7 +26,7 @@ h1.title {
 }
 
 p {
-  font-weight: 600;
+  line-height: 2.4rem;
 }
 
 p.default {
@@ -138,13 +139,13 @@ body {
 }
 
 .nav.menuopened .menu::before {
-  -webkit-transform: translateY(0rem) rotateZ(45deg);
-          transform: translateY(0rem) rotateZ(45deg);
+  -webkit-transform: translateY(-1.4rem) rotateZ(-45deg);
+          transform: translateY(-1.4rem) rotateZ(-45deg);
 }
 
 .nav.menuopened .menu::after {
-  -webkit-transform: translateY(0rem) rotateZ(-45deg);
-          transform: translateY(0rem) rotateZ(-45deg);
+  -webkit-transform: translateY(1.4rem) rotateZ(45deg);
+          transform: translateY(1.4rem) rotateZ(45deg);
 }
 
 .nav .pages {
@@ -200,7 +201,7 @@ body {
 .nav .menu {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 10rem;
   height: 100%;
   cursor: pointer;
@@ -216,6 +217,8 @@ body {
   height: .3rem;
   background: #0D2B59;
   border-radius: 1rem;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
 }
@@ -233,14 +236,13 @@ body {
 .nav .logo {
   position: absolute;
   top: 50%;
-  left: 50%;
-  min-width: 8rem;
+  left: 3rem;
   color: #0D2B59;
   font-size: 3.2rem;
   font-weight: 600;
   text-align: center;
-  -webkit-transform: translateX(-50%) translateY(-60%);
-          transform: translateX(-50%) translateY(-60%);
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
   z-index: 10;
 }
 
@@ -256,7 +258,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 8rem 3rem 3rem 3rem;
+  padding: 10rem 3rem 3rem 3rem;
   overflow: auto;
   text-align: left;
   z-index: 99;
@@ -328,10 +330,10 @@ body {
 .menuoverlay .sep {
   position: relative;
   display: inline-block;
-  width: 6rem;
+  width: 4rem;
   margin: 3rem 0;
   height: .2rem;
-  background: rgba(13, 43, 89, 0.1);
+  background: rgba(13, 43, 89, 0.2);
   -webkit-transform: translateX(-2rem);
           transform: translateX(-2rem);
   opacity: 0;
@@ -350,7 +352,9 @@ body {
   margin: 0;
   padding: 1.5rem 0;
   color: #0D2B59;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
   -webkit-transition-delay: .25s;
           transition-delay: .25s;
   opacity: 0;
@@ -378,7 +382,8 @@ body {
 
 .menuoverlay a.cta {
   color: #1F78FF;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .menuoverlay a.cta ion-icon {
@@ -390,12 +395,12 @@ body {
 }
 
 .menuoverlay a.social {
-  margin-right: 4rem;
+  margin-right: 4.5rem;
 }
 
 .menuoverlay a.social ion-icon {
-  -webkit-transform: translateY(0.35rem) scale(1.5);
-          transform: translateY(0.35rem) scale(1.5);
+  -webkit-transform: translateY(0.35rem) scale(1.25);
+          transform: translateY(0.35rem) scale(1.25);
   -webkit-transform-origin: center left;
           transform-origin: center left;
 }
@@ -432,7 +437,7 @@ main section {
 
 main section.hero .grid {
   position: absolute;
-  top: 2rem;
+  bottom: 18rem;
   right: 0rem;
   width: 75vw;
   opacity: .5;
@@ -504,18 +509,18 @@ main section.courses .course .image {
 
 main section.courses .course .title, main section.courses .course .date, main section.courses .course .cta {
   font-size: 1.6rem;
-  margin: 2rem;
+  margin: 2.5rem;
 }
 
 main section.courses .course .title {
   font-weight: 600;
   font-size: 2rem;
-  margin: 3rem 2rem 3rem 2rem;
+  margin: 3rem 2.5rem;
 }
 
 main section.courses .course .date {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2.5rem;
   left: 0;
   opacity: .5;
 }
@@ -581,9 +586,9 @@ main section.courses form .group label#submit {
 main section.courses form .group label#submit ion-icon {
   -webkit-transform: translateY(0.25rem) scale(1.75);
           transform: translateY(0.25rem) scale(1.75);
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
-  margin-right: 2rem;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  margin-right: 1.5rem;
 }
 
 main section.courses form .group input {
@@ -619,7 +624,9 @@ main section .team-grid {
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  grid-template: "tl" "p1" "p2";
+  grid-template: "tl"
+ "p1"
+ "p2";
 }
 
 main section .team-grid .tl {
@@ -666,6 +673,10 @@ main section.footer {
   font-weight: 600;
 }
 
+main section.footer .align-top {
+  vertical-align: top;
+}
+
 main section.footer a {
   color: rgba(13, 43, 89, 0.5);
   display: block;
@@ -692,7 +703,7 @@ main section.footer p.title {
   }
   .nav {
     position: absolute;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
@@ -705,8 +716,8 @@ main section.footer p.title {
     height: 4.5rem;
     width: 8rem;
     left: 0;
-    -webkit-transform: translateY(-45%);
-            transform: translateY(-45%);
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
   }
   .nav .pages {
     display: block;
@@ -728,7 +739,6 @@ main section.footer p.title {
   }
   .hero img {
     width: 35vw;
-    max-width: 60rem;
   }
   .hero .heroImage {
     float: right;
@@ -736,8 +746,9 @@ main section.footer p.title {
     max-width: 50rem;
   }
   .hero .grid {
+    position: absolute;
     right: 0;
-    max-width: 43rem;
+    max-width: 75rem !important;
   }
   .inline-grid {
     display: -ms-grid;
@@ -753,7 +764,8 @@ main section.footer p.title {
   }
   .inline-grid.team-grid {
     margin: 0;
-    grid-template: "tl p1" "tl p2";
+    grid-template: "tl p1"
+ "tl p2";
   }
   .inline-grid.team-grid .p1 {
     grid-area: p1;
