@@ -15,42 +15,42 @@
   <body>
     <div class="nav" id="nav">
       <div class="menu" id="navmenu"></div>
-      <a href="" class="logo">acm<span>UPV Chapter</span></a>
+      <a href="https://acmupv.webs.upv.es/" class="logo"
+        >acm<span>UPV Chapter</span></a
+      >
       <div class="pages">
-        <a href="" class="current">Inicio</a>
-        <a href="">Quiénes somos</a>
-        <a href="">ACM Woman</a>
-        <a href="">Eventos</a>
-        <a href="" class="cta">Inscribirme</a>
+        <a href="/equipo">Equipo</a>
+        <a href="/woman">ACM Woman</a>
+        <a href="/blog">Blog y Eventos</a>
+        <a href="#newsletterForm" class="cta">Inscribirme</a>
       </div>
     </div>
     <div class="menuoverlay" id="menuoverlay">
       <div class="menuoverlayclose" id="menuoverlayclose"></div>
-      <a href="" class="nth-child-1 current">Inicio</a><br />
-      <a href="" class="nth-child-2">Quiénes somos</a><br />
-      <a href="" class="nth-child-3">ACM Woman</a><br />
-      <a href="" class="nth-child-4">Eventos</a><br />
-      <div class="nth-child-5 sep"></div>
+      <a href="/equipo" class="nth-child-1 page">Equipo</a><br />
+      <a href="/woman" class="nth-child-2 page">ACM Woman</a><br />
+      <a href="/blog" class="nth-child-3 page">Blog y Eventos</a><br />
+      <div class="nth-child-4 sep"></div>
       <br />
-      <a href="" class="nth-child-6 cta"
+      <a href="#newsletterForm" onclick="document.getElementById('menuoverlayclose').click()" class="nth-child-5 cta"
         ><ion-icon name="mail-outline"></ion-icon> Inscribirme</a
-      ><br /><br />
+      ><br />
       <a
         href="https://www.instagram.com/acmupv/"
         target="_blank"
-        class="nth-child-7 social instagram"
+        class="nth-child-6 social instagram"
         ><ion-icon name="logo-instagram"></ion-icon
       ></a>
       <a
         href="https://twitter.com/acmupv"
         target="_blank"
-        class="nth-child-8 social twitter"
+        class="nth-child-7 social twitter"
         ><ion-icon name="logo-twitter"></ion-icon
       ></a>
       <a
         href="https://www.facebook.com/AcmUpv/"
         target="_blank"
-        class="nth-child-9 social facebook"
+        class="nth-child-8 social facebook"
         ><ion-icon name="logo-facebook"></ion-icon
       ></a>
     </div>
@@ -190,8 +190,8 @@
 
           <div class="wave out"></div>
 
-          <h1 style="margin-top: 8rem;">¿No quieres perderte ningún evento?</h1>
-          <div class="inline-grid" style="margin: 3rem 0 3rem 0;">
+          <h1 style="padding-top: 8rem;" id="newsletterForm">¿No quieres perderte ningún evento?</h1>
+          <div class="inline-grid" style="margin: 6rem 0 3rem 0;">
             <div class="inline-50">
               <p>
                 <b>¡Que no cunda el pánico!</b><br />Dejanos tu nombre y correo,
@@ -242,7 +242,7 @@
         <div class="content">
           <h1>Somos curiosos como tú</h1>
           <div class="inline-grid team-grid" style="margin: 6rem 0 3rem 0;">
-            <a href="" class="tl"></a>
+            <a href="/equipo" class="tl"></a>
             <div class="p1">
               <p>
                 El equipo está formado por estudiantes que investigan y divulgan
@@ -263,13 +263,26 @@
 
       <section class="footer">
         <div class="content">
-          <div class="inline-block" style="margin-right: 6rem;">
+          <div class="inline-block align-top" style="margin-right: 6rem;">
             <p class="title">Información</p>
-            <a href="">Sobre nosotros</a>
+            <a href="/equipo">Equipo</a>
+            <a href="/woman">ACM Woman</a>
+            <a href="/blog">Blog y Eventos</a>
+            <a href="/faq">FAQ</a>
           </div>
-          <div class="inline-block" style="margin-right: 6rem;">
+          <div class="inline-block align-top" style="margin-right: 6rem;">
             <p class="title">Contacto</p>
-            <p>Redes sociales</p>
+            <a href="https://www.instagram.com/acmupv/" target="_blank"
+              >Instagram</a
+            >
+            <a href="https://twitter.com/acmupv" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/AcmUpv/" target="_blank"
+              >Facebook</a
+            >
+          </div>
+          <br>
+          <div class="inline-block align-top">
+            <p style="margin: 5rem 0 3rem 0;">Copyright ©2020 ACM UPV Chapter</p>
           </div>
         </div>
       </section>
